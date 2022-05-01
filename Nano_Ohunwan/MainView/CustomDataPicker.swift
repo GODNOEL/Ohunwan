@@ -14,6 +14,18 @@ struct CustomDataPicker: View {
     @State var currentMonth: Int = 0
     let days: [String] = ["S","M","T","W","T","F","S"]
     
+    //
+    @ViewBuilder
+    func CardView(value: DateValue)->some View{
+        
+        VStack{
+            if value.day != -1{
+                Text("\(value.day)")
+            }
+            //-1이 아니면 날짜를 표시해라(날짜 요일부터 나타내기)
+        }
+    }
+    
     //년,월 정보 extrating해서 나타내기
     func extraDate()->[String]{
         
@@ -53,7 +65,7 @@ struct CustomDataPicker: View {
                 days.insert(DateValue(day: -1 , date: Date()), at: 0)
             }
             return days
-        }
+        }//해당월의 시작일이 아닌면 -1로 노출
 
     
     var body: some View {
@@ -69,6 +81,7 @@ struct CustomDataPicker: View {
                 } label: {
                     Image(systemName: "chevron.left")
                         .font(.title2)
+                        .foregroundColor(Color.black)
                 } //왼쪽 버튼
                 Spacer()
                 
@@ -89,6 +102,7 @@ struct CustomDataPicker: View {
                 } label: {
                     Image(systemName: "chevron.right")
                         .font(.title2)
+                        .foregroundColor(Color.black)
                 }
             }.padding(.horizontal, 16)
             
@@ -105,10 +119,10 @@ struct CustomDataPicker: View {
             // 그리드
             let columns = Array(repeating: GridItem(.flexible()), count: 7)
             
-            LazyVGrid(columns: columns , spacing: 40) {
+            LazyVGrid(columns: columns , spacing: 30) {
                 
                 ForEach(extractDate()){ value in
-//                    Text("\(value.day)")
+                    CardView(value: value)
                 }
                 //LazyVGrid는 columns를 사용하여 반드시 GridItem이라는 매개변수를 같은 변수를 생성해야함
             }
@@ -138,7 +152,7 @@ extension Date{
         let startDate = calendar.date(from: Calendar.current.dateComponents([.year,.month], from: self))!
         
         let range = calendar.range(of: .day, in : .month, for: startDate)!
-//        range.removeLast()
+        //range.removeLast()
         //마지막 날까지 노출 (1일 부터 없어지게 범위를 잡음)
          
         
