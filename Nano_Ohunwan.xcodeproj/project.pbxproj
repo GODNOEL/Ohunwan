@@ -14,6 +14,7 @@
 		7B3424B5281BDAF800F9B385 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3424B4281BDAF800F9B385 /* MainView.swift */; };
 		7B3424B7281BDFBD00F9B385 /* CustomDataPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3424B6281BDFBD00F9B385 /* CustomDataPicker.swift */; };
 		7BBFB035281D05740098DD27 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBFB034281D05740098DD27 /* DateValue.swift */; };
+		7BBFB037281E5EF80098DD27 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBFB036281E5EF70098DD27 /* Record.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		7B3424B4281BDAF800F9B385 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7B3424B6281BDFBD00F9B385 /* CustomDataPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataPicker.swift; sourceTree = "<group>"; };
 		7BBFB034281D05740098DD27 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
+		7BBFB036281E5EF70098DD27 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				7BBFB034281D05740098DD27 /* DateValue.swift */,
+				7BBFB036281E5EF70098DD27 /* Record.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			files = (
 				7B3424B7281BDFBD00F9B385 /* CustomDataPicker.swift in Sources */,
 				7B3424A8281BD9A000F9B385 /* ContentView.swift in Sources */,
+				7BBFB037281E5EF80098DD27 /* Record.swift in Sources */,
 				7B3424B5281BDAF800F9B385 /* MainView.swift in Sources */,
 				7B3424A6281BD9A000F9B385 /* Nano_OhunwanApp.swift in Sources */,
 				7BBFB035281D05740098DD27 /* DateValue.swift in Sources */,
