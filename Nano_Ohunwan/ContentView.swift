@@ -9,7 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        MainView()
+        NavigationView{
+            VStack{
+            MainView()
+            }
+                .navigationBarItems(
+//                    leading:
+//                        Text("🥪2, ✍️10")
+//                        .bold(),
+                    trailing:
+                    NavigationLink(
+                    destination: Text("하이"),
+                    label: {
+                        Image(systemName: "tray.full.fill")
+                            .foregroundColor(Color.black)
+                    })
+                )
+        }
     }
 }
 
