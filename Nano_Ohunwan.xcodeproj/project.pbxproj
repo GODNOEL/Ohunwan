@@ -15,6 +15,9 @@
 		7B3424B7281BDFBD00F9B385 /* CustomDataPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3424B6281BDFBD00F9B385 /* CustomDataPicker.swift */; };
 		7BBFB035281D05740098DD27 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBFB034281D05740098DD27 /* DateValue.swift */; };
 		7BBFB037281E5EF80098DD27 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBFB036281E5EF70098DD27 /* Record.swift */; };
+		7BBFB03A281EB0780098DD27 /* AddRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBFB039281EB0780098DD27 /* AddRecordView.swift */; };
+		7BBFB03C281EC7C70098DD27 /* AddFoodScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBFB03B281EC7C70098DD27 /* AddFoodScreen.swift */; };
+		7BCCBBE0281FE75700B47835 /* AddEtcModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCCBBDF281FE75700B47835 /* AddEtcModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		7B3424B6281BDFBD00F9B385 /* CustomDataPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataPicker.swift; sourceTree = "<group>"; };
 		7BBFB034281D05740098DD27 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
 		7BBFB036281E5EF70098DD27 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		7BBFB039281EB0780098DD27 /* AddRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordView.swift; sourceTree = "<group>"; };
+		7BBFB03B281EC7C70098DD27 /* AddFoodScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodScreen.swift; sourceTree = "<group>"; };
+		7BCCBBDF281FE75700B47835 /* AddEtcModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEtcModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,7 @@
 		7B3424A4281BD9A000F9B385 /* Nano_Ohunwan */ = {
 			isa = PBXGroup;
 			children = (
+				7BBFB038281EB0180098DD27 /* RecordView */,
 				7BBFB033281D05480098DD27 /* Model */,
 				7B3424B3281BDAA700F9B385 /* MainView */,
 				7B3424A5281BD9A000F9B385 /* Nano_OhunwanApp.swift */,
@@ -93,6 +100,16 @@
 				7BBFB036281E5EF70098DD27 /* Record.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7BBFB038281EB0180098DD27 /* RecordView */ = {
+			isa = PBXGroup;
+			children = (
+				7BBFB039281EB0780098DD27 /* AddRecordView.swift */,
+				7BBFB03B281EC7C70098DD27 /* AddFoodScreen.swift */,
+				7BCCBBDF281FE75700B47835 /* AddEtcModal.swift */,
+			);
+			path = RecordView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,9 +185,12 @@
 				7B3424B7281BDFBD00F9B385 /* CustomDataPicker.swift in Sources */,
 				7B3424A8281BD9A000F9B385 /* ContentView.swift in Sources */,
 				7BBFB037281E5EF80098DD27 /* Record.swift in Sources */,
+				7BBFB03A281EB0780098DD27 /* AddRecordView.swift in Sources */,
 				7B3424B5281BDAF800F9B385 /* MainView.swift in Sources */,
 				7B3424A6281BD9A000F9B385 /* Nano_OhunwanApp.swift in Sources */,
+				7BCCBBE0281FE75700B47835 /* AddEtcModal.swift in Sources */,
 				7BBFB035281D05740098DD27 /* DateValue.swift in Sources */,
+				7BBFB03C281EC7C70098DD27 /* AddFoodScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

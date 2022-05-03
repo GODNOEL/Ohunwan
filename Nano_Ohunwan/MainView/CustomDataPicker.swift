@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CustomDataPicker: View {
     @Binding var currentDate: Date
+    @State var foodList = RecordMetaData.all()
     
     // 달력 화살표를 눌렀을 떄 날짜 이동하도록 하기
     @State var currentMonth: Int = 0
@@ -20,10 +21,43 @@ struct CustomDataPicker: View {
         
         VStack{
             if value.day != -1{
-                Text("\(value.day)")
+               
+                if let record = foodList.first(where: { record in
+                    return isSameday(date1: record.recordDate, date2: value.date )
+                }){
+                    ZStack{
+                        Text("\(value.day)")
+                            .frame(height: 40)
+                        NavigationLink(destination: AddRecordView(AddDate: value.date)){
+                            //페이지 뒤 ()에 "변수 : value.타입"을 입력하면 해당 페이지에 값을 넘겨줄 수 있음
+                            //대신 넘겨받는 페이지에도 변수(데이터를 받을 빈깡통)을 만들어야함
+                        
+                        Image("default")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                        }
+                        //★★★★★운동기록에 선택한 이미지를 불러와야함 이건 어케하면 될가?
+                        //if문하고 바인딩 써서 하면될것같은뎅
+                    }
+                    
+                }
+                else{
+                    NavigationLink(destination: AddRecordView(AddDate: value.date)){
+                    Text("\(value.day)")
+                        .foregroundColor(.black)
+                        .frame(height: 40)
+                    }
+                }
             }
             //-1이 아니면 날짜를 표시해라(날짜 요일부터 나타내기)
         }
+    }
+    
+    //운동 기록 날짜 확인
+    func isSameday(date1: Date, date2: Date)->Bool{
+        let calendar = Calendar.current
+        
+        return calendar.isDate(date1, inSameDayAs: date2)
     }
     
     //년,월 정보 extrating해서 나타내기
@@ -119,7 +153,7 @@ struct CustomDataPicker: View {
             // 그리드
             let columns = Array(repeating: GridItem(.flexible()), count: 7)
             
-            LazyVGrid(columns: columns , spacing: 30) {
+            LazyVGrid(columns: columns, spacing: 30) {
                 
                 ForEach(extractDate()){ value in
                     CardView(value: value)
