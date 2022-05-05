@@ -10,7 +10,8 @@ import SwiftUI
 struct AddFoodScreen: View {
     @Environment(\.presentationMode) var presentationMode
     //팝업 닫기 버튼 구현을 위해 Environment 변수를 가져와야함
-    @Binding var foodIndex: String
+//    @Binding var foodIndex: String
+    @Binding var dataStruct: Record
     let columns = [
             GridItem(.flexible()),
             GridItem(.flexible())
@@ -50,7 +51,7 @@ struct AddFoodScreen: View {
             LazyVGrid(columns: columns, spacing: 50){
                 ForEach(Array(zip(foodImgList, foodNameList)), id: \.0) { value in
                     Button(action: {
-                        foodIndex = value.0
+                        dataStruct.ImgURL = value.0
                         presentationMode.wrappedValue.dismiss()
                     }, label: {
                         VStack(){

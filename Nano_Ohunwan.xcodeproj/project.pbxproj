@@ -65,11 +65,11 @@
 		7B3424A4281BD9A000F9B385 /* Nano_Ohunwan */ = {
 			isa = PBXGroup;
 			children = (
-				7BBFB038281EB0180098DD27 /* RecordView */,
-				7BBFB033281D05480098DD27 /* Model */,
-				7B3424B3281BDAA700F9B385 /* MainView */,
 				7B3424A5281BD9A000F9B385 /* Nano_OhunwanApp.swift */,
 				7B3424A7281BD9A000F9B385 /* ContentView.swift */,
+				7B3424B3281BDAA700F9B385 /* MainView */,
+				7BBFB038281EB0180098DD27 /* RecordView */,
+				7BBFB033281D05480098DD27 /* Model */,
 				7B3424A9281BD9A200F9B385 /* Assets.xcassets */,
 				7B3424AB281BD9A200F9B385 /* Preview Content */,
 			);
