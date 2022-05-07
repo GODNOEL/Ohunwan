@@ -19,8 +19,9 @@ struct AddRecordView: View{
     }()
     //Date Formatter을 사용해서 날짜노출 형식을 지정
     
-    @State var dataStruct = Record(foodName: "닭가슴살", ImgURL: "food_1", foodText: "근력 위주의 단단한 운동!", summaryText: "오늘 운동 짱잼", exerciseText: "너모재미있다", todayCondition: "😀", todayWeather: "sun.max", drinkWater: 2, exerciseTime: 60.0, recordDate: getSmpleDate(offset: 1))
-    //스트럭트는 붕어빵틀, 다른 뷰에서 불러와 사용할 수 있음
+    @State var dataStruct = Record(foodName: "노푸드", ImgURL: "default", foodText: "", summaryText: "오늘의 운동을 한마디로!", exerciseText: "오늘 하신 운동이나 소감을 적어보세요!", todayCondition: "", todayWeather: "", drinkWater: 0, exerciseTime: 00.0, recordDate: Date())
+    //Struct는 붕어빵틀, 다른 뷰에서 불러와 사용할 수 있음
+    //초기에 보여줄 값을 세팅하는 코드
     
     //    @State private var summaryText = ""
     @State private var summarytextColor = Color.gray
@@ -67,25 +68,28 @@ struct AddRecordView: View{
             
             Spacer()
         }
-//        .onAppear(){
-//            print(recordData)
-//        }
         .toolbar {
             Button(action: {
-                print(dataStruct)
+                //print(dataStruct)
+                //dataStruct 값 확인하기 위해 추가한 코드
                 
                 dataStruct.recordDate = AddDate
                 foodList.append(dataStruct)
-//                $foodList.append(Record: dataStruct, recordDate: AddDate))
+                //dataStruct안의 recordDate 값을 AddDate(추가한 날짜)로 바꿔라
+                //foodList = Recode 데이터가 모여있는 배열인데 버튼을 누르는 순간
+                //사용자가 입력한 데이터(=dataStruct)가 foodList에 추가 됨 (append는 추가하는 함수)
+                // 근데 foodList는 Main.Veiw에도 바인딩 되었기때문에 추가하는 순가 바로 달력에 아이콘이 노출 되는 것
+                
             }, label: {Text("완료")})
-            //append : 리스트에 추가할 수 있는 함수 (타입애 맞개 써야함)
+            //append : 리스트에 추가할 수 있는 함수 (타입애 맞개 써야 함)
             //RecordMetaData(record: [dataStruct]) = 이미 record는 배열이기 때문에 []를 써줘야함
-            //근데 오류오지게 나서 배열 지움
+            //근데 오류오지게 나서 배열 지움 > 근데 Recode도 안에 여러개 들어갈 수 있어서 배열로 줌 ( [] 쓰면 배열)
         }
+        // toolbar는 네비게이션 뷰 안에서만 보암
+        // toolbar를 주면 네비게이션 우측 상단에 들어간다.
+        
     }
-    // 네비게이션 뷰 안에서만 보암
-    // 네비게이션 우측 상단에 들어간다.
-    
+
 }
 
 struct AddFood: View{

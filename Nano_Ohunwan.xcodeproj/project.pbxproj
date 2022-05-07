@@ -18,6 +18,7 @@
 		7BBFB03A281EB0780098DD27 /* AddRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBFB039281EB0780098DD27 /* AddRecordView.swift */; };
 		7BBFB03C281EC7C70098DD27 /* AddFoodScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBFB03B281EC7C70098DD27 /* AddFoodScreen.swift */; };
 		7BCCBBE0281FE75700B47835 /* AddEtcModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCCBBDF281FE75700B47835 /* AddEtcModal.swift */; };
+		7BD93E3A2823CF05008EFE72 /* SandwichView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD93E392823CF05008EFE72 /* SandwichView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		7BBFB039281EB0780098DD27 /* AddRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordView.swift; sourceTree = "<group>"; };
 		7BBFB03B281EC7C70098DD27 /* AddFoodScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodScreen.swift; sourceTree = "<group>"; };
 		7BCCBBDF281FE75700B47835 /* AddEtcModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEtcModal.swift; sourceTree = "<group>"; };
+		7BD93E392823CF05008EFE72 /* SandwichView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandwichView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				7B3424A7281BD9A000F9B385 /* ContentView.swift */,
 				7B3424B3281BDAA700F9B385 /* MainView */,
 				7BBFB038281EB0180098DD27 /* RecordView */,
+				7BD93E382823CEB8008EFE72 /* SandwichView */,
 				7BBFB033281D05480098DD27 /* Model */,
 				7B3424A9281BD9A200F9B385 /* Assets.xcassets */,
 				7B3424AB281BD9A200F9B385 /* Preview Content */,
@@ -110,6 +113,14 @@
 				7BCCBBDF281FE75700B47835 /* AddEtcModal.swift */,
 			);
 			path = RecordView;
+			sourceTree = "<group>";
+		};
+		7BD93E382823CEB8008EFE72 /* SandwichView */ = {
+			isa = PBXGroup;
+			children = (
+				7BD93E392823CF05008EFE72 /* SandwichView.swift */,
+			);
+			path = SandwichView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B3424B7281BDFBD00F9B385 /* CustomDataPicker.swift in Sources */,
+				7BD93E3A2823CF05008EFE72 /* SandwichView.swift in Sources */,
 				7B3424A8281BD9A000F9B385 /* ContentView.swift in Sources */,
 				7BBFB037281E5EF80098DD27 /* Record.swift in Sources */,
 				7BBFB03A281EB0780098DD27 /* AddRecordView.swift in Sources */,

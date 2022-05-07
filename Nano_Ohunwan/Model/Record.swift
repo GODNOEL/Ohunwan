@@ -57,9 +57,19 @@ extension Record{
     static func all()-> [Record]{
     return [
         
-        Record(foodName: "닭가슴살", ImgURL: "food_1", foodText: "근력 위주의 단단한 운동!", summaryText: "오늘 운동 짱잼", exerciseText: "너모재미있다", todayCondition: "😀", todayWeather: "sun.max", drinkWater: 2, exerciseTime: 60.0, recordDate: getSmpleDate(offset: 1)),
+        Record(foodName: "닭가슴살", ImgURL: "food_3", foodText: "근력 위주의 단단한 운동!", summaryText: "오늘 운동 짱잼", exerciseText: "너모재미있다", todayCondition: "😀", todayWeather: "sun.max", drinkWater: 2, exerciseTime: 60.0, recordDate: getSmpleDate(offset: -4)),
         
-        Record(foodName: "토마토", ImgURL: "food_2", foodText: "얼굴이 빨개질만큼 열정적 운동", summaryText: "오늘 운동 개열심히햇다", exerciseText: "꿀잼딱", todayCondition: "😀", todayWeather: "sun.max", drinkWater: 2, exerciseTime: 60.0, recordDate: getSmpleDate(offset: 5)),
+        Record(foodName: "토마토", ImgURL: "food_2", foodText: "얼굴이 빨개질만큼 열정적 운동", summaryText: "오늘 운동 개열심히햇다", exerciseText: "꿀잼딱", todayCondition: "😀", todayWeather: "sun.max", drinkWater: 2, exerciseTime: 60.0, recordDate: getSmpleDate(offset: -1)),
+        
+        Record(foodName: "토마토", ImgURL: "food_1", foodText: "얼굴이 빨개질만큼 열정적 운동", summaryText: "오늘 운동 개열심히햇다", exerciseText: "꿀잼딱", todayCondition: "😀", todayWeather: "sun.max", drinkWater: 2, exerciseTime: 60.0, recordDate: getSmpleDate(offset: -10)),
+        
+        Record(foodName: "토마토", ImgURL: "food_2", foodText: "얼굴이 빨개질만큼 열정적 운동", summaryText: "오늘 운동 개열심히햇다", exerciseText: "꿀잼딱", todayCondition: "😀", todayWeather: "sun.max", drinkWater: 2, exerciseTime: 60.0, recordDate: getSmpleDate(offset: -15)),
+        
+        Record(foodName: "토마토", ImgURL: "food_3", foodText: "얼굴이 빨개질만큼 열정적 운동", summaryText: "오늘 운동 개열심히햇다", exerciseText: "꿀잼딱", todayCondition: "😀", todayWeather: "sun.max", drinkWater: 2, exerciseTime: 60.0, recordDate: getSmpleDate(offset: -17)),
+        
+        Record(foodName: "토마토", ImgURL: "food_3", foodText: "얼굴이 빨개질만큼 열정적 운동", summaryText: "오늘 운동 개열심히햇다", exerciseText: "꿀잼딱", todayCondition: "😀", todayWeather: "sun.max", drinkWater: 2, exerciseTime: 60.0, recordDate: getSmpleDate(offset: -20)),
+        
+        Record(foodName: "토마토", ImgURL: "food_4", foodText: "얼굴이 빨개질만큼 열정적 운동", summaryText: "오늘 운동 개열심히햇다", exerciseText: "꿀잼딱", todayCondition: "😀", todayWeather: "sun.max", drinkWater: 2, exerciseTime: 60.0, recordDate: getSmpleDate(offset: -22)),
 
 //        RecordMetaData(record:
 //        Record(foodName: "닭가슴살", ImgURL: "food_1", foodText: "근력 위주의 단단한 운동!", summaryText: "오늘 운동 짱잼", exerciseText: "너모재미있다", todayCondition: "😀", todayWeather: "sun.max", drinkWater: 2, exerciseTime: 60.0),recordDate: getSmpleDate(offset: 1)),

@@ -19,7 +19,7 @@ struct ContentView: View {
 //                        .bold(),
                     trailing:
                     NavigationLink(
-                    destination: Text("하이"),
+                    destination: SandwichView(),
                     label: {
                         Image(systemName: "tray.full.fill")
                             .foregroundColor(Color.black)

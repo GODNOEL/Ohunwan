@@ -13,6 +13,8 @@ struct AddEtcModal: View{
 //    @Binding var waterIndex: Bool
 //    @Binding var timeIndex: Bool
     @Binding var dataStruct: Record
+    @Environment(\.presentationMode) var presentationMode
+    //팝업 닫기 버튼 구현을 위해 Environment 변수를 가져와야함
     
     var body: some View{
         AddCondition(dataStruct: $dataStruct)
@@ -22,6 +24,21 @@ struct AddEtcModal: View{
         DrinkWater(dataStruct: $dataStruct)
         Divider().padding(.vertical, 15)
         ExerciseTime(dataStruct: $dataStruct)
+            .padding(.bottom, 40)
+        
+        Button(action: {
+            presentationMode.wrappedValue.dismiss()
+        }, label: {
+            Text("완료")
+                .bold()
+                .foregroundColor(.white)
+                .padding(.vertical, 10)
+                .frame(maxWidth: .infinity)
+                .background(
+                    RoundedRectangle(cornerRadius: 100)
+                        .foregroundColor(.blue)
+                        .shadow(color: .black.opacity(0.1),radius: 10, x: 0, y: 0))
+        }).padding(.horizontal, 20)
     }
     
 }
@@ -43,6 +60,7 @@ struct AddCondition: View{
         VStack{
             Text("컨디션")
                 .font(.system(size: 14))
+                .padding(.bottom, 10)
             
             LazyVGrid(columns: columns, spacing: 30){
                 ForEach(conditionrList, id:\.self){ value in
@@ -94,6 +112,7 @@ struct AddWeather: View{
         VStack{
             Text("날씨")
                 .font(.system(size: 14))
+                .padding(.bottom, 10)
             
             LazyVGrid(columns: columns, spacing: 30){
                 ForEach(weatherList, id:\.self){ value in
@@ -128,7 +147,7 @@ struct DrinkWater: View{
     var body: some View{
         
         Text("마신 물")
-            .font(.system(size: 14))
+            .font(.system(size: 16))
         
         Text("\(temp+1)잔")
             .font(.system(size: 18).bold())
@@ -187,7 +206,7 @@ struct ExerciseTime: View{
         
         VStack{
         Text("운동 시간")
-            .font(.system(size: 14))
+            .font(.system(size: 16))
         
             Text("약 \(dataStruct.exerciseTime, specifier: "%.0f")분")
             .font(.system(size: 18).bold())

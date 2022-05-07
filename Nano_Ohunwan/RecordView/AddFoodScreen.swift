@@ -19,36 +19,31 @@ struct AddFoodScreen: View {
     //LazyVGird를 사용하기위해 colums를 변수로 지정,
     //gridItem을 추가에 따라 뷰에 보여지는 갯수가 변함(지금은 2개라서 2단이 나타남)
     
-    @State var foodImgList = ["food_1", "food_2", "food_3", "food_4","food_5"]
-    @State var foodNameList = ["닭가슴살", "양상추", "토마토", "치즈","햄","계란"]
-    @State var foodTextList = ["근력 위주의 운동", "설명2", "얼굴이 빨개질만큼 열정적 운동", "설명3","설명4","설명5"]
-    
-    //    let FoodName = Array(1...5).map{"목록 \($0)"}
-    //    let colums = [
-    //        GridItem(.adaptive(minimum: 100))
-    //    ]
+    @State var foodImgList = ["food_1", "food_2", "food_3", "food_4","food_5","food_6"]
+    @State var foodNameList = ["닭가슴살", "양상추", "토마토", "치즈","아보카도","계란"]
+    @State var foodTextList = ["근력 위주의 운동", "가벼운 식단과\n간단한 운동", "얼굴이 빨개질만큼\n열정적 운동", "과식했지만\n열심히 운동함","균형잡힌 식단과\n적당한 운동","근력 & 유산소의\n밸런스가 완벽한 운동!"]
     
     var body: some View{
         VStack{
-            HStack{
-                Text("오늘의 재료를 선택해주세요!")
-                    .font(.system(size:20).bold())
+            HStack(alignment: .top){
+                Text("오늘의 재료🥪를\n선택해주세요🛒")
+                    .font(.system(size:26).bold())
                 Spacer()
                 Button(action: {
                     presentationMode.wrappedValue.dismiss()
                 }) {
                     Image(systemName: "xmark")
-                        .font(.system(size: 30))
+                        .font(.system(size: 24))
                         .foregroundColor(Color.black)
                 }
             }
-            .padding(.bottom, 20)
+            .padding(EdgeInsets(top: 15, leading: 20, bottom: 10, trailing: 20))
             
             
             .foregroundColor(.black)
             .font(.system(size: 30))
             
-            LazyVGrid(columns: columns, spacing: 50){
+            LazyVGrid(columns: columns, spacing: 20){
                 ForEach(Array(zip(foodImgList, foodNameList)), id: \.0) { value in
                     Button(action: {
                         dataStruct.ImgURL = value.0
@@ -57,7 +52,7 @@ struct AddFoodScreen: View {
                         VStack(){
                             Image(value.0)
                                 .resizable()
-                                .frame(width: 150, height: 150)
+                                .frame(width: 140, height: 140)
                             VStack{
                                 Text(value.1)
                                     .font(.system(size: 18).bold())
@@ -73,6 +68,7 @@ struct AddFoodScreen: View {
                     })
                 }
             }
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
             
             
         }
